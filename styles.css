@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    padding: 50px 20px;
+    color: white;
+}
+
+.heart {
+    font-size: 100px;
+    color: #ff3b3b;
+    animation: heartbeat 1.2s infinite;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: 20px 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.buttons {
+    margin-top: 30px;
+}
+
+.btn {
+    background: white;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 30px;
+    font-size: 1.2em;
+    color: #ff6b6b;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin: 10px;
+    min-width: 120px;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+#yesBtn {
+    background: #ff3b3b;
+    color: white;
+}
+
+.message {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    margin: 30px auto;
+    max-width: 600px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    color: #ff6b6b;
+    display: none;
+    animation: popIn 0.5s ease-out;
+}
+
+.heart-particle {
+    position: absolute;
+    color: #ff3b3b;
+    animation: float 3s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+@keyframes float {
+    0% { 
+        opacity: 1;
+        transform: translateY(0) rotate(0deg);
+    }
+    100% { 
+        opacity: 0;
+        transform: translateY(-100vh) rotate(360deg);
+    }
+}
+
+@keyframes popIn {
+    0% { transform: scale(0); }
+    70% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
